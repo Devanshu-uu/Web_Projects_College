@@ -1,0 +1,99 @@
+<html>
+<head>
+
+</head>
+<title>
+Event-driven JavaScript
+</title>
+<body>
+<h2>Multiplication Table</h2>
+<input type="number" id="num" placeholder="Enter A Number">
+<button onclick="printtable()"> Show Table </button>
+<pre id="TableResult"> </pre>
+
+<script>
+    function printtable() {
+        let num = document.getElementById("num").value;
+        let tableResult = document.getElementById("TableResult");
+        
+        
+        tableResult.textContent = "";
+
+        
+        if(num === "" || isNaN(num)) {
+            tableResult.textContent = "Please enter a valid number!";
+            return;
+        }
+
+       
+        for (let i = 1; i <= 10; i++) {
+            tableResult.textContent += `${num} x ${i} = ${num * i}\n`;
+        }
+    }
+</script>
+
+<h2>Largest Number </h2>
+<input type="number" id="num1" placeholder="Enter A Number">
+<input type="number" id="num2" placeholder="Enter A Number">
+<input type="number" id="num3" placeholder="Enter A Number">
+<button onclick="findLargest()"> Largest Number </button>
+<p id="largestResult"></p>
+
+<script>
+    function findLargest() {
+      let num1=parseFloat(document.getElementById("num1").value);
+      let num2=parseFloat(document.getElementById("num2").value);
+      let num3=parseFloat(document.getElementById("num3").value);
+      let largest=Math.max(num1 ,num2,num3);
+      document.getElementById("largestResult").innerText=`Largest Number: ${largest}`;
+    }
+</script>
+
+
+<h2> Find Factorial </h2>
+<input type="number" id="num4" placeholder="Enter A Number">
+<button onclick="calculatefactorial()"> Calculate </button>
+<pre id="findFactorial"></pre>
+
+<script>
+    function calculatefactorial() {
+        let num4=parseInt(document.getElementById("num4").value);
+        let Factorial=1;
+        for(let i =1 ; i<=num4; i++) {
+            Factorial*=i;
+        }
+        document.getElementById("findFactorial").innerText=`Factorial: ${Factorial}`
+    }
+</script>
+
+
+<h2> Sum & Avg </h2>
+
+<button onclick="findSumAndAverage()"> Calculate </button>
+<p id="result"></p>
+
+
+<script>
+    function findSumAndAverage() {
+        let sum=0,count=0;
+        while (true) {
+            let num5=parseInt(prompt("Enter a positive number (0 to stop):"));
+            if(num5===0) break;
+            if(num5>0) {
+               sum +=num5;
+               count++;
+            }
+    }
+    
+    let average = sum/count;
+document.getElementById("result").innerText=`Sum:${sum}, Average: ${average}`;
+    }
+</script>
+
+
+
+
+</body>
+</html>
+
+

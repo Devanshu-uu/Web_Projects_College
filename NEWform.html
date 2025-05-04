@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #aaa;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0073e6;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form id="registrationForm">
+            <label for="rollNo">Roll Number:</label>
+            <input type="text" id="rollNo" name="rollno">
+            <div class="error" id="rollNoError"></div>
+
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName" name="studentName">
+            <div class="error" id="nameError"></div>
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+            <div class="error" id="genderError"></div>
+
+            <label>Hobbies:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="Hobbies" value="Football"> Football</label>
+                <label><input type="checkbox" name="Hobbies" value="Reading"> Reading</label>
+                <label><input type="checkbox" name="Hobbies" value="Traveling"> Traveling</label>
+                <label><input type="checkbox" name="Hobbies" value="Cooking"> Cooking</label>
+                <label><input type="checkbox" name="Hobbies" value="Photography"> Photography</label>
+                <label><input type="checkbox" name="Hobbies" value="Music"> Music</label>
+                <label><input type="checkbox" name="Hobbies" value="Dancing"> Dancing</label>
+                <label><input type="checkbox" name="Hobbies" value="Gaming"> Gaming</label>
+                <label><input type="checkbox" name="Hobbies" value="Cricket"> Cricket</label>
+            </div>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            <div class="error" id="dobError"></div>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course">
+                <option value="">-- Select Course --</option>
+                <option value="BSc(H) CS">BSc(H) CS</option>
+                <option value="BSc IT">BSc IT</option>
+                <option value="BSc Mathematics">BSc Mathematics</option>
+                <option value="BSc Physics">BSc Physics</option>
+                <option value="BSc Biology">BSc Biology</option>
+                <option value="BSc Biotechnology">BSc Biotechnology</option>
+                <option value="BSc Environmental Science">BSc Environmental Science</option>
+                <option value="BCom">BCom</option>
+                <option value="BCom(H)">BCom(H)</option>
+                <option value="BBA">BBA</option>
+                <option value="BBA(H)">BBA(H)</option>
+                <option value="BA">BA</option>
+                <option value="BA(H) English">BA(H) English</option>
+                <option value="BA(H) Psychology">BA(H) Psychology</option>
+            </select>
+            <div class="error" id="courseError"></div>
+
+            <p><input type="submit" value="Submit">
+            <input type="reset" value="Clear all"></p>
+        </form>
+    </div>
+
+    <script>
+        function validateRollNo() {
+            const rollNo = document.getElementById("rollNo").value.trim();
+            if (!/^\d{7}$/.test(rollNo)) {
+                document.getElementById("rollNoError").textContent = "Roll number must be a 7-digit number.";
+                return false;
+            } else {
+                document.getElementById("rollNoError").textContent = "";
+                return true;
+            }
+        }
+
+        function validateName() {
+            const name = document.getElementById("studentName").value.trim();
+            if (!/^[A-Za-z\s]+$/.test(name)) {
+                document.getElementById("nameError").textContent = "Name should contain only letters";
+                return false;
+            } else {
+                document.getElementById("nameError").textContent = "";
+                return true;
+            }
+        }
+
+        function validateGender() {
+            const gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                document.getElementById("genderError").textContent = "Please select a gender.";
+                return false;
+            } else {
+                document.getElementById("genderError").textContent = "";
+                return true;
+            }
+        }
+
+        function validateDOB() {
+            const dob = document.getElementById("dob").value;
+            if (!dob) {
+                document.getElementById("dobError").textContent = "Date of Birth is required.";
+                return false;
+            } else {
+                document.getElementById("dobError").textContent = "";
+                return true;
+            }
+        }
+
+        function validateCourse() {
+            const course = document.getElementById("course").value;
+            if (course === "") {
+                document.getElementById("courseError").textContent = "Course is required.";
+                return false;
+            } else {
+                document.getElementById("courseError").textContent = "";
+                return true;
+            }
+        }
+
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const isRollValid = validateRollNo();
+            const isNameValid = validateName();
+            const isGenderValid = validateGender();
+            const isDOBValid = validateDOB();
+            const isCourseValid = validateCourse();
+
+            if (isRollValid && isNameValid && isGenderValid && isDOBValid && isCourseValid) {
+                alert("Registration successful!");
+                this.reset();
+            }
+        });
+    </script>
+</body>
+
+</html>

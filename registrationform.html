@@ -1,0 +1,177 @@
+<html>
+
+<head>
+
+    
+
+    <title>Student Registratio Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form id="registrationForm">
+
+
+            <label for="rollNo">Roll Number:</label>
+            <input type="text" id="rollNo" name="rollno">
+            <div class="error" id="rollNoError"></div>
+
+
+    <div class="form-group">
+        <label for="studentName">Name:-------></label>
+        <input type="text" id="studentName" name="studentName">
+        <div class="error" id="nameError"></div>
+    </div>
+    
+    <div class="form-group">
+        <label>Gender:</label>
+        <div class="radio-group ">
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+        <div class="error" id="genderError"></div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Hobbies</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="Hobbies" value="Football"> Football</label>
+            <label><input type="checkbox" name="Hobbies" value="Reading"> Reading</label>
+            <label><input type="checkbox" name="Hobbies" value="Traveling"> Traveling</label>
+            <label><input type="checkbox" name="Hobbies" value="Cooking"> Cooking</label>
+            <label><input type="checkbox" name="Hobbies" value="Photography"> Photography</label>
+            <label><input type="checkbox" name="Hobbies" value="Music"> Music</label>
+            <label><input type="checkbox" name="Hobbies" value="Dancing"> Dancing</label>
+            <label><input type="checkbox" name="Hobbies" value="Gaming"> Gaming</label>
+            <label><input type="checkbox" name="Hobbies" value="Cricket"> Cricket</label>
+
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+        <div class="error" id="dobError"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="course">Course</label>
+        <select id="course" name="course">
+            <option value="">-- Select Course --</option>
+            <option value="BSc(H) CS">BSc(H) CS</option>
+            <option value="BSc IT">BSc IT</option>
+            <option value="BSc Mathematics">BSc Mathematics</option>
+            <option value="BSc Physics">BSc Physics</option>
+            <option value="BSc Biology">BSc Biology</option>
+            <option value="BSc Biotechnology">BSc Biotechnology</option>
+            <option value="BSc Environmental Science">BSc Environmental Science</option>
+            <option value="BCom">BCom</option>
+            <option value="BCom(H)">BCom(H)</option>
+            <option value="BBA">BBA</option>
+            <option value="BBA(H)">BBA(H)</option>
+            <option value="BA">BA</option>
+            <option value="BA(H) English">BA(H) English</option>
+            <option value="BA(H) Psychology">BA(H) Psychology</option>
+            
+            
+        </select>
+        <div class="error" id="courseError"></div>
+    </div>
+
+    
+
+
+    <script>
+        // Individual validation function
+        function validateRollNo() {
+            const rollNo = document.getElementById("rollNo").value.trim();
+            if (!/^\d{7}$/.test(rollNo)) {
+                document.getElementById("rollNoError").textContent="Roll number must be a 7-digit number.";
+                return false;
+            } else {
+                document.getElementById("rollNoError").textContent ="";
+                return true;
+            }      
+        }
+
+
+        function validateName() {
+            const name = document.getElementById("studentName").value.trim();
+            if (!/^[A-Za-z\s]+$/.test(name)) {
+                document.getElementById("nameError").textContent="Name should contain only letters";
+                return false;
+            } else {
+                document.getElementById("nameError").textContent ="";
+                return true;
+            }      
+        }
+
+
+        function validateGender() {
+            const gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                document.getElementById("genderError").textContent="Please Select a Gender";
+                return false;
+            } else {
+                document.getElementById("genderError").textContent ="";
+                return true;
+            }      
+        }
+
+
+        function validateDOB() {
+            const dob = document.getElementById("dob").value;
+            if (!dob) {
+                document.getElementById("dobError").textContent="Date Of Birth Is Required";
+                return false;
+            } else {
+                document.getElementById("dobError").textContent ="";
+                return true;
+            }      
+        }
+
+
+        function validateCourse() {
+            const course = document.getElementById("course").value;
+            if (course === "") {
+                document.getElementById("courseError").textContent="Course Is Required";
+                return false;
+                
+            } else {
+                document.getElementById("courseError").textContent ="";
+                return true;
+            }   
+        }
+
+        // Form Submisson
+        document.getElementById("registrationForm").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const isRollValid = validateRollNo();
+            const isNameValid = validateName();
+            const isGenderValid = validateGender();
+            const isDOBValid = validateDOB();
+            const isCourseValid = validateCourse();
+
+            if (isRollValid && isCourseValid && isDOBValid && isGenderValid && isNameValid) {
+                alert("Registration successful!");
+                this.reset(); // Reset the form
+            }
+        });
+
+
+
+    </script>
+
+<p><input type="submit" value="Submit">
+<input type="reset" value="Clear all"></p>
+    
+      
+
+            
+</body>
+</html>
