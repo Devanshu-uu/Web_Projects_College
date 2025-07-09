@@ -1,59 +1,56 @@
-# 🌐 HTML Practice – Devanshu
+<!-- ✨ Animated & Clean HTML Practice README -->
 
-This repository contains my basic HTML projects and layout experiments. It includes work on frames, forms, tables, and other beginner-level components for hands-on learning.
+<h1 align="center">🌐 HTML Projects Practice – Devanshu</h1>
 
----
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&center=true&vCenter=true&width=480&lines=Forms+%7C+Tables+%7C+Frames+%7C+Pages;Hands-on+HTML+Practice;Building+Web+Foundation" alt="Typing animation">
+</p>
 
-## ✅ Key Files
-
-- 📋 **Forms & Registration**
-  - `form.html`, `NEWform.html`, `registrationform.html`
-
-- 🗓️ **Time Table & Tables**
-  - `TimeTable.html`, `table.html`
-
-- 🖼️ **Frames**
-  - `frames.html`, `frame1.html` → `frame5.html`
-
-- 👤 **Profile Pages**
-  - `profile.html`, `java.html`, `photos.html`, `hobbies.html`
-
-- 🔗 **Navigation**
-  - `link.html`
+<!-- 🌊 Animated Wave Separator -->
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/waves/wave3.svg" width="100%" />
 
 ---
 
-## 🧠 Purpose
-
-To build a strong foundation in HTML through structured practice with real examples.
-
----
-
-## 📬 Contact
-
-- [GitHub](https://github.com/Devanshu-uu)  
-- [Instagram](https://www.instagram.com/devanshu.uu?igsh=MW1ocGt6aG5xc3c1ZA==)
+## 🗂️ Key Files
+- 📝 **Forms**: `form.html`, `NEWform.html`, `registrationform.html`  
+- 📅 **Tables**: `TimeTable.html`, `table.html`  
+- 🪟 **Frames**: `frame1.html` → `frame5.html`  
+- 📄 **Pages**: `profile.html`, `java.html`, `photos.html`, `hobbies.html`  
+- 🔗 **Navigation**: `link.html`
 
 ---
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/devanshu.uu)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/devanshumaurya)  
-[![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/devanshu_uu)  
-[![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/Devanshu_uu)  
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@VispotGamer) 
+## 🛠 Tools Used  
+![HTML5](https://img.shields.io/badge/HTML5-E44D26?style=for-the-badge&logo=html5&logoColor=white)  
+![VS Code](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 ---
 
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Devanshu-uu&theme=chartreuse-dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=Devanshu-uu&theme=chartreuse-dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Devanshu-uu&theme=chartreuse-dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+## 🎯 What’s Next?
+- 🎨 Add **CSS styling**
+- 📱 Make the design **responsive**
+- 🌐 Convert it into a **personal portfolio**
 
 ---
-[![](https://visitcount.itsvg.in/api?id=Devanshu-uu&icon=4&color=3)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## 📈 GitHub Stats  
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Devanshu-uu&show_icons=true&theme=dracula&hide_border=true" width="47%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Devanshu-uu&theme=dracula&hide_border=true" width="47%" />
+</p>
+
+---
+
+## 🌐 Connect With Me  
+<p align="center">
+  <a href="https://instagram.com/devanshu.uu"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
+  <a href="https://linkedin.com/in/devanshumaurya"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://x.com/Devanshu_uu"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" /></a>
+  <a href="https://youtube.com/@VispotGamer"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Devanshu-uu&label=Profile+Views&color=brightgreen" alt="Profile Views Count" />
+</p>
